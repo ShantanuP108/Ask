@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      /* Add your styles from style.css here */
+      .container {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .header_text {
+        color: #333;
+      }
+
+      .gif_container img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Create container div
+      var containerDiv = document.createElement('div');
+      containerDiv.classList.add('container');
+
+      // Create header div and h1 element
+      var headerDiv = document.createElement('div');
+      var headerText = document.createElement('h1');
+      headerText.textContent = "Yeeyy ! Finally";
+      headerText.classList.add('header_text');
+      headerDiv.appendChild(headerText);
+
+      // Create gif container div and img element
+      var gifContainerDiv = document.createElement('div');
+      var gifImage = document.createElement('img');
+      gifImage.src = "https://i.postimg.cc/wTDG30TB/yes.gif";
+      gifImage.alt = "Cute animated illustration";
+      gifContainerDiv.classList.add('gif_container');
+      gifContainerDiv.appendChild(gifImage);
+
+      // Create button element
+      var button = document.createElement('button');
+      button.classList.add('btn');
+      button.id = "yesButton";
+      button.textContent = "Let's Fix a Date";
+      button.addEventListener('click', nextPage);
+
+      // Append elements to the container div
+      containerDiv.appendChild(headerDiv);
+      containerDiv.appendChild(gifContainerDiv);
+      containerDiv.appendChild(button);
+
+      // Append container div to the body
+      document.body.appendChild(containerDiv);
+
+      // Function to be called when the button is clicked
+      function nextPage() {
+        // Add your logic for the next page here
+        console.log("Button clicked! Let's fix a date.");
+      }
+    </script>
+  </body>
+</html>
